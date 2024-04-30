@@ -24,4 +24,5 @@ public class WeatherService {
         return newWeather;
     }
 
+
 }
