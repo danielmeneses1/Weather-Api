@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-public enum weatherTypeStatus {
+public enum WeatherTypeStatus {
     SUNNY("sunny"),
     CLOUDY("cloudy"),
     LIGHTRAIN("lightrain"),
@@ -8,7 +8,7 @@ public enum weatherTypeStatus {
 
     private final String weatherType;
 
-    weatherTypeStatus(String weatherType) {
+    WeatherTypeStatus(String weatherType) {
         this.weatherType = weatherType;
     }
     public String getWeatherType(){
