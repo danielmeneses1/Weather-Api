@@ -20,8 +20,32 @@ public class WeatherModel {
     @Column
     private Date date;
 
-    public WeatherModel(){
-        this.weatherTypeStatus = weatherTypeStatus.SUNNY;
-        this.date = new Date();
+    public WeatherModel() {
+    }
+
+    public WeatherModel(Integer id, WeatherTypeStatus weatherTypeStatus, Date date) {
+        this.id = id;
+        this.weatherTypeStatus = weatherTypeStatus;
+        this.date = date;
+    }
+
+    public WeatherTypeStatus getWeatherTypeStatus() {
+        return weatherTypeStatus;
+    }
+
+    public void setWeatherTypeStatus(WeatherTypeStatus weatherTypeStatus) {
+        this.weatherTypeStatus = weatherTypeStatus;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

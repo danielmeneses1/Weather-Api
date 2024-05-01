@@ -2,9 +2,11 @@ package com.example.demo.service;
 
 import com.example.demo.model.WeatherModel;
 import com.example.demo.repository.IWeather;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class WeatherService {
     private IWeather repository;
 
@@ -16,6 +18,14 @@ public class WeatherService {
     public List<WeatherModel> listWeather(){
         List <WeatherModel> list = repository.findAll();
         return list;
+    }
+
+    public WeatherModel getWeatherForecastById(long id){
+        WeatherModel weather = repository.findById(id).orElse(null);
+        if (weather == null){
+            return null;
+        }
+        return weather;
     }
 
     //post

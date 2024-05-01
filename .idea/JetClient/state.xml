@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="folders">
+            <list>
+              <folderState>
+                <option name="id" value="4c594272-b9d8-4d8b-b634-c14d1680908d" />
+                <option name="name" value="New Folder" />
+                <option name="sortWeight" value="1000000" />
+              </folderState>
+            </list>
+          </option>
+          <option name="id" value="5ca2c77f-3cb5-44c4-8c0b-2001d59b2cc9" />
+          <option name="name" value="New Collection" />
+          <option name="sortWeight" value="1000000" />
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="folderPath" value="C:\Users\danie\OneDrive\Área de Trabalho\weatherApi\.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="2f4e52a3-6f5a-4b65-964e-c35797f6b9f2" />
+  </component>
+</project>
