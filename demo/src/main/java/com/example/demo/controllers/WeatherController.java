@@ -19,7 +19,11 @@ public class WeatherController {
 
     @GetMapping("/get")
     public ResponseEntity<List<WeatherModel>> getWeather(){
-        return ResponseEntity.ok(weatherService.listWeather());
+        return ResponseEntity.ok(weatherService.listValidWeather());
+    }
+    @GetMapping("/getall")
+    public ResponseEntity<List<WeatherModel>> getAllWeather(){
+        return ResponseEntity.ok(weatherService.listAllWeather());
     }
 
     @GetMapping("/get/{id}")
@@ -34,6 +38,12 @@ public class WeatherController {
     @PostMapping("/add")
     public ResponseEntity<WeatherModel> addWeather(@RequestBody WeatherModel weather){
         return ResponseEntity.ok(weatherService.addWeatherForecast(weather));
+    }
+
+    @DeleteMapping("/delete")
+    public ResponseEntity<String> deleteWeather(@RequestBody WeatherModel weather){
+        weatherService.deleteAllWeather();
+        return ResponseEntity.ok("Deleted");
     }
 
 }

@@ -20,6 +20,9 @@ public class WeatherModel {
     @Column
     private Date date;
 
+    @Column
+    private boolean isDelayed;
+
     public WeatherModel() {
     }
 
@@ -47,5 +50,13 @@ public class WeatherModel {
 
     public Integer getId() {
         return id;
+    }
+
+    public boolean isDelayed() {
+        return isDelayed;
+    }
+
+    public void setDelayed(boolean delayed) {
+        isDelayed = delayed;
     }
 }
