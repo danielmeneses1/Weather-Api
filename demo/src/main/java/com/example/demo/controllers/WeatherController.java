@@ -40,10 +40,14 @@ public class WeatherController {
         return ResponseEntity.ok(weatherService.addWeatherForecast(weather));
     }
 
-    @DeleteMapping("/delete")
-    public ResponseEntity<String> deleteWeather(@RequestBody WeatherModel weather){
-        weatherService.deleteAllWeather();
-        return ResponseEntity.ok("Deleted");
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteWeather(@PathVariable long id){
+        if(weatherService.deleteEspecifcWeather(id) == true){
+            return ResponseEntity.ok("Weather "+ id + "deleted");
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
+
 
 }

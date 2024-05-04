@@ -31,14 +31,18 @@ public class WeatherService {
         }else {
             weather.setDelayed(false);
         }
+            repository.save(weather);
+    }
+    public void verifyIfAListIsDelayed(List<WeatherModel> list){
+        for(WeatherModel weather : list){
+            checkIsDelayed(weather);
+        }
     }
 
     //get
     public List<WeatherModel> listValidWeather(){
         List <WeatherModel> list = repository.findAll();
-        for(WeatherModel weather : list){
-            checkIsDelayed(weather);
-        }
+        verifyIfAListIsDelayed(list);
         List<WeatherModel> filteredList = filterValidWeather(list);
         return filteredList;
     }
@@ -46,12 +50,10 @@ public class WeatherService {
     //getall
     public List<WeatherModel> listAllWeather(){
         List <WeatherModel> list = repository.findAll();
-        for(WeatherModel weather : list){
-            checkIsDelayed(weather);
-        }
+        verifyIfAListIsDelayed(list);
         return list;
     }
-
+    //get by id
     public WeatherModel getWeatherForecastById(long id){
         WeatherModel weather = repository.findById(id).orElse(null);
         if (weather == null){
@@ -67,9 +69,15 @@ public class WeatherService {
         return weather;
     }
 
-    //deleteAll
-    public void deleteAllWeather(){
-        repository.deleteAll();
+
+
+    //delete
+    public boolean deleteEspecifcWeather(long id){
+        if(repository.existsById(id)){
+            repository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 
