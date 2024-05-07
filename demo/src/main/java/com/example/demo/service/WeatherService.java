@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.model.WeatherModel;
+import com.example.demo.domain.weatherForecast.WeatherModel;
 import com.example.demo.repository.IWeather;
 import org.springframework.stereotype.Service;
 
