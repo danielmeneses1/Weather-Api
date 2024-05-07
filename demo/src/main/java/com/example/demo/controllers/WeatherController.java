@@ -1,6 +1,6 @@
 package com.example.demo.controllers;
 
-import com.example.demo.model.WeatherModel;
+import com.example.demo.domain.weatherForecast.WeatherModel;
 import com.example.demo.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
