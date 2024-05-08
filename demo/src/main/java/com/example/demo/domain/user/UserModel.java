@@ -30,6 +30,12 @@ public class UserModel implements UserDetails {
     @Column(name="password", length = 100, nullable = false)
     private String password;
 
+    public UserModel(String name, String password, UserRole role) {
+        this.name = name;
+        this.password = password;
+        this.role = role;
+    }
+
     @Enumerated
     @Column(name="role")
     private UserRole role;

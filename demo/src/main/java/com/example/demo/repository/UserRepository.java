@@ -1,10 +1,10 @@
 package com.example.demo.repository;
 
-import org.apache.catalina.User;
-import org.apache.catalina.UserDatabase;
+
+import com.example.demo.domain.user.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public interface UserRepository extends JpaRepository<User, String>{
+public interface UserRepository extends JpaRepository<UserModel, String>{
     UserDetails findByName(String login);
 }
