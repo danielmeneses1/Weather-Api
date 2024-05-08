@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.example.demo.services;
 
 import com.example.demo.domain.weatherForecast.WeatherModel;
-import com.example.demo.repository.IWeather;
+import com.example.demo.repository.WeatherRepository;
 import org.springframework.stereotype.Service;
 
 
@@ -11,9 +11,9 @@ import java.util.stream.Collectors;
 
 @Service
 public class WeatherService {
-    private IWeather repository;
+    private WeatherRepository repository;
 
-    public WeatherService(IWeather repository){
+    public WeatherService(WeatherRepository repository){
         this.repository = repository;
     }
 
